@@ -1,0 +1,51 @@
+
+/* HeadAD.vue */
+.head__ad--wrap {
+  width: 750px;
+  height: 88px;
+  padding: 6px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: content-box;
+  overflow: hidden;
+  background-image: url('https://bfs.biyao.com/group1/M00/B4/3B/rBACW1yjqW6Ae7RhAAAd5r4TJxY228.jpg');
+  background-size: cover;
+  background-position: top;
+}
+.head__ad--wrap .head__ad--money {
+  height: 46px;
+  padding: 0 32px;
+  line-height: 46px;
+  color: #ffffff;
+  font-size: 32px;
+  border-right: 1.5px solid #ffffff;
+}
+.head__ad--desc {
+  padding: 0 24px;
+  color: #ffffff;
+  font-size: 22px;
+  font-family: PingFangSC-Medium;
+}
+.head__ad--desc span {
+  padding-left: 10px;
+}
+
+/* SearchLink.vue */
+.head__search--wrap {
+  margin: 14px 20px;
+  height: 60px;
+  background-color: #f2f2f2;
+  background-image: url('../assets/search.png');
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  background-position: 10px center;
+}
+.head__search--holder {
+  padding-left: 60px;
+  line-height: 60px;
+  font-size: 30px;
+  color: #808080;
+}
