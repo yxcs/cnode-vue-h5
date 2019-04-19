@@ -147,7 +147,6 @@ export default {
       })
     },
     getMsgNum() {
-      console.log(this.userMsg.token)
       http.getMsgNum(this.userMsg.token).then(res => {
         if (res.success) {
           this.msgCount = res.data;
