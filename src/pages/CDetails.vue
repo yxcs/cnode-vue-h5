@@ -7,7 +7,7 @@
         <div><div><span>{{detail.visit_count}}</span> 次浏览</div><div>来自 {{detail.tagTxt}}</div></div>
       </div>
       <template v-if="!!userMsg.id">
-        <div v-if="detail.is_collect" @click="collect" class="collect">取消</div>
+        <div v-if="detail.is_collect" @click="delCollect" class="collect">取消</div>
         <div v-else @click="collect" class="collect">收藏</div>
       </template>
     </div>
@@ -57,8 +57,27 @@ export default {
         }
       });
     },
+    delCollect() {
+      const params = {
+        accesstoken: this.userMsg.token,
+        topic_id: this.id
+      }
+      http.setDelCollect(params).then(res => {
+        if (res.success) {
+          this.detail.is_collect = false;
+        }
+      })
+    },
     collect() {
-
+      const params = {
+        accesstoken: this.userMsg.token,
+        topic_id: this.id
+      }
+      http.setCollect(params).then(res => {
+        if (res.success) {
+          this.detail.is_collect = true;
+        }
+      })
     }
   }
 }

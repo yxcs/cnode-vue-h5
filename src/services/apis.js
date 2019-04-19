@@ -26,3 +26,11 @@ export const getMsgNum = accesstoken => {
 export const getAllMsg = params => {
   return axios.get(`${BASE_URL}/messages`, {params: {...params}})
 }
+
+export const setCollect = params => {
+  return axios.post(`${BASE_URL}/topic_collect/collect`, {...params})
+}
+
+export const setDelCollect = params => {
+  return axios.post(`${BASE_URL}/topic_collect/de_collect`, {...params})
+}
